@@ -1,0 +1,145 @@
+<mxfile host="65bd71144e">
+    <diagram id="hSCpVePyr5FJp9BlosV3" name="Page-1">
+        <mxGraphModel dx="739" dy="1500" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="4" style="edgeStyle=none;html=1;" edge="1" parent="1" source="2">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="200" y="75" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="2" value="Comercial/&lt;br&gt;Martillero" style="whiteSpace=wrap;html=1;fillColor=#FF3912;" vertex="1" parent="1">
+                    <mxGeometry x="40" y="60" width="80" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="20" style="edgeStyle=none;html=1;" edge="1" parent="1" source="3">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="200" y="150.00000000000023" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="3" value="usuario/casa venta o alquiler" style="whiteSpace=wrap;html=1;fillColor=#007FFF;" vertex="1" parent="1">
+                    <mxGeometry x="40" y="130" width="90" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" style="edgeStyle=none;html=1;" edge="1" parent="1" source="5">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="360" y="50" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="7" style="edgeStyle=none;html=1;" edge="1" parent="1" source="5">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="360" y="100" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="5" value="Nos llega la solicitud" style="whiteSpace=wrap;html=1;fillColor=#FF3912;" vertex="1" parent="1">
+                    <mxGeometry x="200" y="60" width="80" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" style="edgeStyle=none;html=1;" edge="1" parent="1" source="8">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="520" y="105" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="8" value="Lo aceptamos" style="whiteSpace=wrap;html=1;fillColor=#FF3912;" vertex="1" parent="1">
+                    <mxGeometry x="360" y="90" width="80" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="No lo aceptamos" style="whiteSpace=wrap;html=1;fillColor=#FF3912;" vertex="1" parent="1">
+                    <mxGeometry x="360" y="30" width="80" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" style="edgeStyle=none;html=1;" edge="1" parent="1" source="11">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="650" y="80" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="15" style="edgeStyle=none;html=1;" edge="1" parent="1" source="11">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="650" y="130" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="11" value="Crea su cuenta" style="whiteSpace=wrap;html=1;fillColor=#FF3912;" vertex="1" parent="1">
+                    <mxGeometry x="520" y="90" width="80" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" value="Por donde nos llega? Mail o cuenta Admin" style="whiteSpace=wrap;html=1;fillColor=#FF3912;" vertex="1" parent="1">
+                    <mxGeometry x="180" width="110" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" value="Crea su red de clientes" style="whiteSpace=wrap;html=1;fillColor=#FF3912;" vertex="1" parent="1">
+                    <mxGeometry x="650" y="60" width="80" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="18" style="edgeStyle=none;html=1;" edge="1" parent="1" source="17">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="860" y="125" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="17" value="Contacta usuarios para ofrecerse como martillero" style="whiteSpace=wrap;html=1;fillColor=#FF3912;" vertex="1" parent="1">
+                    <mxGeometry x="650" y="100" width="140" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="29" style="edgeStyle=none;html=1;" edge="1" parent="1" source="19">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="940" y="209.99999999999977" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="33" style="edgeStyle=none;html=1;" edge="1" parent="1" source="19">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="940" y="50" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="19" value="Ofrece a sus clientes la nueva vivienda&amp;nbsp;" style="whiteSpace=wrap;html=1;fillColor=#FF3912;" vertex="1" parent="1">
+                    <mxGeometry x="870" y="100" width="140" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="22" style="edgeStyle=none;html=1;" edge="1" parent="1" source="21">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="290" y="210" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="21" value="Crea su cuenta" style="whiteSpace=wrap;html=1;fillColor=#007FFF;" vertex="1" parent="1">
+                    <mxGeometry x="200" y="130" width="90" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="24" style="edgeStyle=none;html=1;" edge="1" parent="1" source="23">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="480" y="224.99999999999977" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="31" style="edgeStyle=none;html=1;" edge="1" parent="1" source="23">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="360" y="309.9999999999998" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="37" style="edgeStyle=none;html=1;entryX=-0.023;entryY=0.393;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="23" target="36">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="23" value="Crea su publiacion ya sea para vender o alquilar" style="whiteSpace=wrap;html=1;fillColor=#007FFF;" vertex="1" parent="1">
+                    <mxGeometry x="300" y="200" width="120" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="26" style="edgeStyle=none;html=1;" edge="1" parent="1" source="25">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="680" y="224.99999999999977" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="25" value="Es contactado por un comercial/martillero" style="whiteSpace=wrap;html=1;fillColor=#007FFF;" vertex="1" parent="1">
+                    <mxGeometry x="480" y="200" width="120" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="28" style="edgeStyle=none;html=1;" edge="1" parent="1" source="27">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="870" y="224.99999999999977" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="27" value="El mismo le ofrece un cliente" style="whiteSpace=wrap;html=1;fillColor=#007FFF;" vertex="1" parent="1">
+                    <mxGeometry x="680" y="200" width="120" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="30" value="Transaccion hecha" style="whiteSpace=wrap;html=1;fillColor=#007500;" vertex="1" parent="1">
+                    <mxGeometry x="880" y="210" width="120" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="32" value="Opciones para compartir" style="whiteSpace=wrap;html=1;fillColor=#007FFF;" vertex="1" parent="1">
+                    <mxGeometry x="300" y="320" width="120" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="34" value="Opciones para compartir" style="whiteSpace=wrap;html=1;fillColor=#FF3912;" vertex="1" parent="1">
+                    <mxGeometry x="870" width="140" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="38" style="edgeStyle=none;html=1;entryX=0.146;entryY=1.048;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="36" target="27">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="36" value="Contacta martilleros de confianza" style="whiteSpace=wrap;html=1;fillColor=#007FFF;" vertex="1" parent="1">
+                    <mxGeometry x="490" y="290" width="120" height="50" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
