@@ -101,7 +101,7 @@ const Propiedad = () => {
   const imageUrl =
     images &&
     images[0] &&
-    `${process.env.API_HOST}${(images[0] as Images).data.replace(/\s+/g, "")}`;
+    `${process.env.API_HOST!}${(images[0] as Images).data.replace(/\s+/g, "")}`;
 
   return (
     <section className="w-full h-full min-h-screen p-8 md:p-16">
