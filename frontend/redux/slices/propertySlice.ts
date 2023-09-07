@@ -1,10 +1,11 @@
   import axios from "axios";
   import { IProperty, IPropertyState } from "../../models/types";
   import { createAsyncThunk, createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { apiHome } from "../../config/api";
 
   export const getProperties = createAsyncThunk('data/fetchData', async () => {
     try {
-      const { data } = await axios.get(`http://localhost:3001/propertys`);
+      const { data } = await apiHome.get(`/propertys`);
       return data;
     } catch (error) {
       throw new Error('Error fetching data: ' + error);

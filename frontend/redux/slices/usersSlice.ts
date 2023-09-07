@@ -1,12 +1,12 @@
-import axios from "axios";
 import { IUser } from "../../models/types";
 import { createAsyncThunk, createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { apiHome } from "../../config/api";
 
 const initialState: IUser[] = []
 
 export const getUsers = createAsyncThunk('data/fetchUsers', async () => {
   try {
-    const { data } = await axios.get(`http://localhost:3001/users/get-users`);
+    const { data } = await apiHome.get(`/users/get-users`);
     return data;
   } catch (error) {
     throw new Error('Error fetching users: ' + error);
