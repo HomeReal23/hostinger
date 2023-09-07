@@ -1,15 +1,14 @@
 import axios from 'axios';
-import { env } from 'process';
-
-const {NEXT_PUBLIC_BACK_API} = env;
+const baseURL = process.env.API_HOST!;
 
 const apiHome = axios.create({
-  baseURL: NEXT_PUBLIC_BACK_API,
+  baseURL: baseURL,
   timeout: 10000,
   headers: {
     'Content-Type': 'application/json',
     Accept: 'application/json',
   },
 });
+
 
 export {apiHome};

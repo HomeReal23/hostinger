@@ -26,7 +26,7 @@ const Card = ({
   const router = useRouter();
   const [image, setImage] = useState(
     images[0] &&
-      `${process.env.NEXT_PUBLIC_BACK_API}${(images[0] as Images).data.replace(
+      `${process.env.API_HOST!}${(images[0] as Images).data.replace(
         /\s+/g,
         ""
       )}`

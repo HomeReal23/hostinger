@@ -141,10 +141,7 @@ const Inmueble = () => {
     });
 
     try {
-      await axios.post(
-        `${process.env.NEXT_PUBLIC_BACK_API}/propertys`,
-        formData
-      );
+      await axios.post(`${process.env.API_HOST!}/propertys`, formData);
       setSuccess(true);
 
       setFormValues({

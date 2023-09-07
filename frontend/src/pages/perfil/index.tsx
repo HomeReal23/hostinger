@@ -39,7 +39,7 @@ const Profile = () => {
 
   const handleRegister = async () => {
     try {
-      await axios.put(`${process.env.NEXT_PUBLIC_BACK_API}/users/update`, {
+      await axios.put(`${process.env.API_HOST!}/users/update`, {
         email: session?.user.email,
         role: role && role.toLowerCase(),
         movil: formValues.movil,
