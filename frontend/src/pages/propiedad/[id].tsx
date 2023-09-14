@@ -14,7 +14,6 @@ import { getUsers } from "../../../redux/slices/usersSlice";
 import { selectUsersData } from "../../../redux/reselect/usersSelector";
 import EmailService from "@/resend";
 import axios from "axios";
-import { apiHome } from "../../../config/api";
 
 const Propiedad = () => {
   const router = useRouter();
@@ -52,7 +51,7 @@ const Propiedad = () => {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     try {
       e.preventDefault();
-      const res = await apiHome.post(`/email`, formValues);
+      const res = await axios.post(`${process.env.API_HOST}/email`, formValues);
       console.log(res);
     } catch (e) {
       console.log(e);
