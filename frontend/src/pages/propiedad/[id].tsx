@@ -12,14 +12,16 @@ import { BsXDiamond } from "react-icons/bs";
 import Spinner from "@/components/Spinner";
 import { getUsers } from "../../../redux/slices/usersSlice";
 import { selectUsersData } from "../../../redux/reselect/usersSelector";
-import EmailService from "@/resend";
 import axios from "axios";
+import { useSession } from "next-auth/react";
 
 const Propiedad = () => {
   const router = useRouter();
   const dispatch = useDispatch<AppDispatch>();
   const properties = useSelector(selectPropertiesData);
   const users = useSelector(selectUsersData);
+  const { data: session } = useSession();
+  const user = session?.user;
 
   useEffect(() => {
     if (!properties) dispatch(getProperties());
@@ -27,7 +29,8 @@ const Propiedad = () => {
 
   const { id } = router.query;
   const property = properties!.find((prop) => prop._id === id) as IProperty;
-  const userToFind = users.find((user) => user._id === property.createdBy);
+  const userToFind =
+    users && property && users.find((user) => user._id === property.createdBy);
 
   const [formValues, setFormValues] = useState({
     clientEmail: userToFind && (userToFind.email as string),
@@ -55,6 +58,25 @@ const Propiedad = () => {
       console.log(res);
     } catch (e) {
       console.log(e);
+    }
+  };
+
+  const handleDelete = async () => {
+    try {
+      if (user && property && user.id === property.createdBy) {
+        const confirmDelete = window.confirm(
+          "¿Estás seguro que quieres borrar la publicación?"
+        );
+
+        if (confirmDelete) {
+          const res = await axios.delete(
+            `${process.env.API_HOST}/propertys/${id}`
+          );
+          router.push("/");
+        }
+      }
+    } catch (error) {
+      console.error("Error deleting property:", error);
     }
   };
 
@@ -113,9 +135,19 @@ const Propiedad = () => {
       ) : (
         <article className="w-full shadow-lg rounded-lg p-6">
           <article className="flex w-full flex-col gap-4 mb-5 items-start lg:mb-0 lg:flex-row lg:justify-between lg:items-center ">
-            <div className="my-4">
-              <h3 className="text-2xl 2xl:text-4xl font-bold">{title}</h3>
-              <p>{address}</p>
+            <div className="flex gap-4 items-center">
+              <div className="my-4">
+                <h3 className="text-2xl 2xl:text-4xl font-bold">{title}</h3>
+                <p>{address}</p>
+              </div>
+              {user && property && user.id === property.createdBy && (
+                <button
+                  onClick={handleDelete}
+                  className="bg-red-500 text-white rounded-lg h-[40px] p-2"
+                >
+                  Borrar propiedad
+                </button>
+              )}
             </div>
             <div className="flex gap-2">
               <div className="bg-home-light-blue text-white rounded-xl px-6 flex items-center">
@@ -177,7 +209,7 @@ const Propiedad = () => {
                 </div>
               </div>
             </article>
-            <article className="h-full w-full xl:w-[50%] flex items-center justify-center">
+            <article className="h-full w-full xl:w-[50%] flex flex-col items-center justify-center">
               <div className="shadow-md rounded-md flex flex-col items-center justify-center p-6 w-full max-w-[400px] border border-gray-200">
                 <div className="flex items-center justify-center gap-6">
                   <Image

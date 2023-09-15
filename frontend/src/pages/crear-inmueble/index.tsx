@@ -9,6 +9,7 @@ import Spinner from "@/components/Spinner";
 const Inmueble = () => {
   const router = useRouter();
   const [sucess, setSuccess] = useState(false);
+  const [error, setError] = useState("");
   const { data: session } = useSession();
   const user = session?.user;
 
@@ -183,8 +184,10 @@ const Inmueble = () => {
       setTimeout(() => {
         router.push("/");
       }, 3000);
-    } catch (error) {
-      alert("An error occurred while submitting the form.");
+    } catch (error: any) {
+      if (error.response.data) {
+        setError("Falta un valor requerido");
+      }
     }
   };
 
@@ -199,7 +202,7 @@ const Inmueble = () => {
           <div className="mt-8 w-full flex justify-start">
             <Link
               href={"/"}
-              className="bg-white p-2 rounded-full w-8 flex items-center justify-center"
+              className="bg-slate-200 p-2 rounded-full w-8 flex items-center justify-center"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -658,6 +661,7 @@ const Inmueble = () => {
               >
                 Enviar
               </button>
+              {error && <p className="text-red-500 font-sm">{error}</p>}
             </form>
             {sucess && (
               <h1 className="mb-2 px-4 text-lg text-center">

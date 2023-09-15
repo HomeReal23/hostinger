@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { IPropertyCard, Images } from "../../../models/types";
 import Image from "next/image";
 import { LiaBedSolid } from "react-icons/lia";
@@ -23,6 +23,7 @@ const Card = ({
   searchType,
   m2,
 }: IPropertyCard) => {
+  console.log(images, "images");
   const router = useRouter();
   const [image, setImage] = useState(
     images[0] &&
@@ -31,6 +32,16 @@ const Card = ({
         ""
       )}`
   );
+
+  useEffect(() => {
+    setImage(
+      images[0] &&
+        `${process.env.API_HOST!}${(images[0] as Images).data.replace(
+          /\s+/g,
+          ""
+        )}`
+    );
+  }, [images]);
 
   return (
     <div
@@ -57,19 +68,19 @@ const Card = ({
       </div>
       <div className="flex flex-col justify-center items-start p-4">
         <div className="flex justify-start items-center">
-          <p className="font-bold text-2xl my-2">
+          <p className="font-bold text-xl my-2">
             €
             {(price &&
               price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")) ||
               (bail && bail.toString().replace(/\B(?=(\d{3})+(?!\d))/g, "."))}
           </p>
-          {bail && <p className="text-2xl">/mes</p>}
+          {bail && <p className="text-xl">/mes</p>}
         </div>
-        <h3 className="text-2xl font-bold mb-2">{title}</h3>
+        <h3 className="text-xl font-bold mb-2">{title}</h3>
         <div className="flex flex-col items-start mb-8">
           <div className="flex gap-1 items-center">
             <CiLocationOn size={20} />
-            <p className="text-lg">{address}</p>
+            <p className="text-base">{address}</p>
           </div>
           <p className="pl-6 text-md text-left font-bold">
             {neighborhood && (

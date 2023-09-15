@@ -18,10 +18,6 @@ const PropertysHome = ({ alquiler }: PropertyHome) => {
 
   const properties = useSelector(selectPropertiesData);
 
-  useEffect(() => {
-    dispatch(getProperties());
-  }, [dispatch]);
-
   const filteredProperties =
     properties &&
     properties.filter(

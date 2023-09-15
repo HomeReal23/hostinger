@@ -25,6 +25,10 @@ const Profile = () => {
     signOut({ callbackUrl: "/" });
   };
 
+  const handleCreate = () => {
+    router.push("/crear-inmueble");
+  };
+
   const [role, setRole] = useState<string | null>(null);
   const [formValues, setFormValues] = useState({ surname: "", movil: "" });
 
@@ -83,12 +87,20 @@ const Profile = () => {
             Tipo de usuario{" "}
             {user.role === "client" ? "CLIENTE" : user.role.toLocaleUpperCase()}
           </p>
-          <button
-            className="text-white bg-home-dark-blue rounded-lg p-2"
-            onClick={handleDisconnect}
-          >
-            Desconectarse
-          </button>
+          <div className="flex gap-2">
+            <button
+              className="text-white bg-home-dark-blue rounded-lg p-2"
+              onClick={handleDisconnect}
+            >
+              Desconectarse
+            </button>
+            <button
+              className="text-white bg-home-dark-blue rounded-lg p-2"
+              onClick={handleCreate}
+            >
+              Crear publicación
+            </button>
+          </div>
         </div>
       </article>
       {filterUserProperties && filterUserProperties.length > 0 && (
@@ -98,7 +110,7 @@ const Profile = () => {
               Tus publicaciones
             </h2>
           </div>
-          <div>
+          <div className="w-full flex gap-3 justify-center">
             {filterUserProperties.map((property: IPropertyCard, i) => (
               <Card
                 _id={property._id}

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { IPropertyCard, Images } from "../../../models/types";
 import Image from "next/image";
 import { CiLocationOn } from "react-icons/ci";
@@ -29,18 +29,28 @@ function HomeCard({
       )}`
   );
 
+  useEffect(() => {
+    setImage(
+      images[0] &&
+        `${process.env.API_HOST!}${(images[0] as Images).data.replace(
+          /\s+/g,
+          ""
+        )}`
+    );
+  }, [images]);
+
   return (
     <article className="flex justify-center items-center h-full w-full my-8 border shadow-md rounded-xl">
-      <div className="w-full h-full">
+      <div className="relative w-full h-0" style={{ paddingTop: "35%" }}>
         <Image
           alt={title}
           src={image}
           onError={() => {
             setImage("/imgs/home.png");
           }}
-          width={900}
-          height={900}
-          className="w-full h-full rounded-l-xl"
+          layout="fill"
+          objectFit="cover"
+          className="rounded-l-xl"
         />
         <div className="absolute">
           <div className="relative bottom-[160px] right-[616px] bg-black w-[100px] gap-1 flex justify-center items-center p-1 rounded-lg z-10">
@@ -60,7 +70,7 @@ function HomeCard({
           {bail && <p className="text-xl">/mes</p>}
         </div>
         <div>
-          <h3 className="text-2xl font-bold mb-2">{title}</h3>
+          <h3 className="text-3xl font-bold mb-2">{title}</h3>
           <div className="flex gap-1 items-center mb-8">
             <CiLocationOn size={20} />
             <p className="text-base">
