@@ -27,7 +27,6 @@ export const postProperty = async (req: Request, res: Response) => {
     try{
 
         const {userId,title, searchType, poblation, neighborhood, propertyType, bedrooms, address, m2, propertyHeight, buildingHeight, bathrooms, price, garage, pool, furnished, pets, terrace, garden, elevator, accessibleProperty, a_c, heating, floorsType, windowsType, doorsType, mainDoor, antique, status, independentLiving, hotWater, laundry, bail} = req.body
-        console.log(req.body)
 
         if(!userId || !address || !title || !searchType || !poblation  || !m2 || !buildingHeight || !bedrooms || !bathrooms  || !propertyType || !garage || !pool || !furnished || !pets || !terrace || !garden || !accessibleProperty || !a_c || (!price && !bail)) return res.status(404).json("A required value is missing")
         

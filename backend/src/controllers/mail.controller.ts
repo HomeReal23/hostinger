@@ -9,7 +9,7 @@ export const postMail = async (req: Request, res: Response) => {
         const resend = new Resend(apiKey);
 
         const data = await resend.emails.send({
-            from: userEmail,
+            from: '',
             to: "info@homerealstate.es",
             subject: "Hello World",
             html: content + number,

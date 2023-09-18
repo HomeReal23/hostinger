@@ -16,9 +16,9 @@ const Inmueble = () => {
   useEffect(() => {
     async function checkAuth() {
       const session = await getSession();
-      if (!session || (user && user.role === "comercial")) {
+      if (!session || (user && user.role === "client")) {
         router.push("/");
-        alert("Los usuarios Comerciales no pueden crear publicaciones");
+        alert("Los clientes no pueden crear publicaciones");
       }
     }
     checkAuth();
